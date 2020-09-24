@@ -1,0 +1,12 @@
+FROM rabbitmq:management
+
+MAINTAINER <thiagopc.dev@gmail.com>
+
+RUN apt update
+
+RUN apt install curl -y
+
+#RUN sleep 50 && curl -i -u guest:guest -H "content-type:application/json" -XPUT -d'{"type":"fanout","durable":true}' http://localhost:15672/api/exchanges/%2f/hashedexchange
+#RUN curl -i -u guest:guest -H "content-type:application/json" -XPUT -d'{"type":"fanout","durable":true}' http://localhost:15672/api/exchanges/%2f/hashedexchange
+
+#ENTRYPOINT [ "/bin/bash", "-l", "-c" ]

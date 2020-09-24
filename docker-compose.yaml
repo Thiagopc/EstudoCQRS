@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  mysql:
+    build: ./arquivos-mysql    
+    ports:
+      - "3306:3306"
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  rabbit:
+    image: rabbitmq:management    
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  
